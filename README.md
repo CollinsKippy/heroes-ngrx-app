@@ -1,7 +1,7 @@
 # HeroesNgrxApp
 
 This App Will Focus on the Basics of Angular.\
-Key Areas: Directives and NgRx.\
+Key Areas: Standalone Components, Directives and NgRx.\
 
 ## Development server
 
