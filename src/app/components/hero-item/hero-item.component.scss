@@ -1,17 +1,18 @@
 :host {
   display: block;
-  margin-bottom: 1rem;
 }
 
+$bg-color: rgb(242, 245, 220);
+
 mat-card {
-  margin-top: 1rem;
   border-radius: 2px;
   width: 20rem;
   height: 10rem;
 }
 
 mat-card-header {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  background-color: $bg-color;
 }
 
 mat-card-content {
