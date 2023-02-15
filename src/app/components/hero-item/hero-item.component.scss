@@ -19,12 +19,19 @@ mat-card-content {
 }
 
 mat-card-actions {
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
 }
 
 .power-name {
   font-style: 500;
   color: #777;
+}
+
+h2 {
+  padding: 1rem 0.5rem;
+  text-align: center;
 }
 
 button {

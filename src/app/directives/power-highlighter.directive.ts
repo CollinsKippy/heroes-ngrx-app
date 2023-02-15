@@ -25,7 +25,7 @@ export class PowerHighlighterDirective {
 
     if (this._powerLevel >= 90) {
       // Change Card Color
-      this.renderer2.setStyle(this.elementRef.nativeElement, 'background-color', 'lightblue');
+      this.renderer2.setStyle(this.elementRef.nativeElement, 'background-color', '#f2fbd6');
     }
   }
 }
