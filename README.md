@@ -2,6 +2,7 @@
 
 This App Will Focus on the Basics of Angular.\
 Key Areas: Standalone Components, Directives and NgRx.\
+App uses Json-server with db.json at the root of the application.\
 
 ## Development server
 
