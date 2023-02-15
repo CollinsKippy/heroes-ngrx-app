@@ -3,10 +3,10 @@
     <mat-card-title>{{hero?.name}}</mat-card-title>
   </mat-card-header>
   <mat-divider></mat-divider>
-  <mat-card-content>
+  <mat-card-content [appPowerHighlighter]="hero?.powerLevel">
     <h2>
-      <span class="power-name">Power:</span>
-      <span>{{hero?.powerLevel}}</span>
+      <span class=" power-name">Power:</span>
+    <span>{{hero?.powerLevel}}</span>
     </h2>
   </mat-card-content>
   <mat-card-actions>
