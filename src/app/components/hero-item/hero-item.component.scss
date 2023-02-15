@@ -7,7 +7,6 @@ $bg-color: rgb(242, 245, 220);
 mat-card {
   border-radius: 2px;
   width: 20rem;
-  height: 10rem;
 }
 
 mat-card-header {
@@ -19,7 +18,15 @@ mat-card-content {
   padding-top: 1rem;
 }
 
+mat-card-actions {
+  margin-top: 1rem;
+}
+
 .power-name {
   font-style: 500;
   color: #777;
+}
+
+button {
+  border-radius: 2px;
 }
