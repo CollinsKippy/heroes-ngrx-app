@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of, tap } from 'rxjs';
 import { Hero } from '../entities/hero';
 
 @Injectable({
@@ -15,5 +15,11 @@ export class HeroService {
     headers: {
       'Content-Type': 'application/json'
     }
-  });
+  }).pipe(
+    tap(heroes => console.table(heroes)),
+    catchError(err => {
+      console.log({ err });
+      return of(err);
+    })
+  );
 }

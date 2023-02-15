@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+mat-card {
+  margin-top: 1rem;
+  border-radius: 2px;
+  width: 20rem;
+  height: 10rem;
+}
+
+mat-card-header {
+  margin-bottom: 1rem;
+}
+
+mat-card-content {
+  padding-top: 1rem;
+}
+
+.power-name {
+  font-style: 500;
+  color: #777;
+}

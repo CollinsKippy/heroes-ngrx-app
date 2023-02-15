@@ -9,6 +9,8 @@ import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDividerModule } from '@angular/material/divider';
+import { HeroListComponent } from "./components/hero-list/hero-list.component";
 
 @NgModule({
     declarations: [
@@ -29,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
         }),
         BrowserAnimationsModule,
         NavBarComponent,
+        MatDividerModule,
+        HeroListComponent,
+
         AppRoutingModule,
     ]
 })

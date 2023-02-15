@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { NavigationLink } from './components/nav-bar/nav-bar.component';
+import { HeroService } from './services/hero.service';
+import { Hero } from './entities/hero';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +16,5 @@ export class AppComponent {
   ];
   appName: string = 'Perforce';
   title = 'heroes-ngrx-app';
+
 }
