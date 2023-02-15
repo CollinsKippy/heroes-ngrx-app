@@ -4,4 +4,4 @@
 
 <mat-divider></mat-divider>
 
-<app-hero-list [heroes]="heroes$ | async"></app-hero-list>
+<app-hero-list [heroes]="heroes$ | async" (viewDetails)="onViewDetails($event)"></app-hero-list>

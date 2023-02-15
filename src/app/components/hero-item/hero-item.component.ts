@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
@@ -15,4 +15,12 @@ import { MatButtonModule } from '@angular/material/button';
 export class HeroItemComponent {
   @Input()
   hero!: Hero | null;
+
+  @Output()
+  viewDetails = new EventEmitter<Hero>();
+
+  onViewDetails(hero: Hero | null) {
+    if (hero)
+      this.viewDetails.emit(hero);
+  }
 }

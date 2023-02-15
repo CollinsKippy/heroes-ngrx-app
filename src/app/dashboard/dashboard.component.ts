@@ -16,4 +16,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.heroes$ = this.heroService.heroes$;
   }
+
+  onViewDetails(hero: Hero | null) {
+    if (hero) {
+      // TODO: Navigate to detail section;
+      console.log({ hero });
+    }
+  }
 }
