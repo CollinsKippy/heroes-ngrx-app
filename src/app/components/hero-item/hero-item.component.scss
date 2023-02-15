@@ -1,17 +1,11 @@
-:host {
-  display: block;
-}
-
-$bg-color: rgb(242, 245, 220);
-
 mat-card {
   border-radius: 2px;
   width: 20rem;
+  transition: all 400ms ease-in-out;
 }
 
 mat-card-header {
   padding-bottom: 1rem;
-  background-color: $bg-color;
 }
 
 mat-card-content {
@@ -26,7 +20,7 @@ mat-card-actions {
 
 .power-name {
   font-style: 500;
-  color: #777;
+  color: rgb(150, 54, 54);
 }
 
 h2 {
