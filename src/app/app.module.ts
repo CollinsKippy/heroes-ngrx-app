@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,7 @@ import { HeroesComponent } from './heroes/heroes.component';
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
-        AppRoutingModule,
+        HttpClientModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
             enabled: !isDevMode(),
             // Register the ServiceWorker as soon as the application is stable
@@ -27,7 +28,8 @@ import { HeroesComponent } from './heroes/heroes.component';
             registrationStrategy: 'registerWhenStable:30000'
         }),
         BrowserAnimationsModule,
-        NavBarComponent
+        NavBarComponent,
+        AppRoutingModule,
     ]
 })
 export class AppModule { }

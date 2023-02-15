@@ -1,0 +1,8 @@
+{
+  "heroes": [
+    { "id": 1, "name": "Moran15", "powerLevel": 92 },
+    { "id": 2, "name": "Maajabu", "powerLevel": 89 },
+    { "id": 3, "name": "GavanaT", "powerLevel": 94 },
+    { "id": 4, "name": "Kiongosy", "powerLevel": 77 }
+  ]
+}
