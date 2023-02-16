@@ -24,7 +24,6 @@ export class HeroService {
   /**
    * Process the incoming error.
    * Logging the error in a future release.
-   * @param err Error object
    * @param requestName Name of Request
    * @returns Error Observable
    */
