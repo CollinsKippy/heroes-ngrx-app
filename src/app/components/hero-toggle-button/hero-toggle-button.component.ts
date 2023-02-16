@@ -30,7 +30,7 @@ import {
         animate('0.3s')
       ]),
       transition('closed => open', [
-        animate('0.25s')
+        animate('0.2s')
       ])
 
     ])
