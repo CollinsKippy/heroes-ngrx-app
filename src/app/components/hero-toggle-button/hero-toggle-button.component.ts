@@ -1,5 +1,5 @@
 import { MatIconModule } from '@angular/material/icon';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, MatIconModule],
   templateUrl: './hero-toggle-button.component.html',
-  styleUrls: ['./hero-toggle-button.component.scss']
+  styleUrls: ['./hero-toggle-button.component.scss'],
 })
 export class HeroToggleButtonComponent {
-
+  toggleActive: boolean = false;
 }

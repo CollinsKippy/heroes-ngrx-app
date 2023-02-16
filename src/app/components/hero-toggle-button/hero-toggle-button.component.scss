@@ -2,7 +2,7 @@ $toggle-container-bg: #ededed;
 $toggle-container-border-color: #ebebeb;
 $toggle-container-active: #3f51b5;
 
-$toggle: #ffffeb;
+$toggle-bg: #ffffeb;
 
 .toggle-container {
   position: relative;
@@ -13,7 +13,7 @@ $toggle: #ffffeb;
   margin: 0 4px;
   border: 1px solid $toggle-container-border-color;
 
-  &.activated {
+  &:active {
     background-color: $toggle-container-active;
   }
 
@@ -24,6 +24,8 @@ $toggle: #ffffeb;
     justify-content: center;
     align-items: center;
 
+    transition: all 300ms ease-in-out;
+
     top: 50%;
     left: 4px;
     transform: translateY(-50%);
@@ -31,8 +33,12 @@ $toggle: #ffffeb;
     width: 36px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: $toggle;
+    background-color: $toggle-bg;
     box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 30%),
       0px 1px 1px 0px rgb(0 0 0 / 24%), 0px 1px 3px 0px rgb(0 0 0 / 22%);
+
+    &:active {
+      left: 50px;
+    }
   }
 }

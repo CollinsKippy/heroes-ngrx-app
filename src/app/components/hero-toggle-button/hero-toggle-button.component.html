@@ -1,5 +1,6 @@
-<div class="toggle-container">
-  <div class="toggle">
-    <mat-icon aria-hidden="false" aria-label="open lock icon" fontIcon="lock"></mat-icon>
+<div class="toggle-container" [class.active]="toggleActive">
+  <div class="toggle" (click)="toggleActive = !toggleActive">
+    <mat-icon *ngIf="!toggleActive" aria-hidden=" false" aria-label="open lock icon" fontIcon="lock"></mat-icon>
+    <mat-icon *ngIf="toggleActive" aria-hidden=" false" aria-label="open lock icon" fontIcon="lock_open"></mat-icon>
   </div>
 </div>
