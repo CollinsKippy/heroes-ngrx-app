@@ -11,6 +11,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDividerModule } from '@angular/material/divider';
 import { HeroListComponent } from "./components/hero-list/hero-list.component";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { HeroListComponent } from "./components/hero-list/hero-list.component";
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         HttpClientModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
             enabled: !isDevMode(),
@@ -29,10 +31,12 @@ import { HeroListComponent } from "./components/hero-list/hero-list.component";
             // or after 30 seconds (whichever comes first).
             registrationStrategy: 'registerWhenStable:30000'
         }),
-        BrowserAnimationsModule,
-        NavBarComponent,
+
         MatDividerModule,
+        MatSnackBarModule,
+
         HeroListComponent,
+        NavBarComponent,
 
         AppRoutingModule,
     ]
