@@ -11,6 +11,6 @@
   </mat-card-content>
   <mat-card-actions>
     <button (click)="onViewDetails(hero)" mat-raised-button color="primary">Details</button>
-    <app-hero-toggle-button></app-hero-toggle-button>
+    <app-hero-toggle-button (toggled)="onToggle($event, hero)" [isActive]="hero?.isActive"></app-hero-toggle-button>
   </mat-card-actions>
 </mat-card>

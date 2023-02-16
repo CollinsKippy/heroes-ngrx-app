@@ -1,6 +1,6 @@
-<div class="toggle-container" [class.active]="isOpen">
-  <div class="toggle" (click)="onToggle()" [@openClose]="isOpen ? 'open': 'closed' ">
-    <mat-icon *ngIf="!isOpen" aria-hidden=" false" aria-label="open lock icon" fontIcon="lock"></mat-icon>
-    <mat-icon *ngIf="isOpen" aria-hidden=" false" aria-label="open lock icon" fontIcon="lock_open"></mat-icon>
+<div class="toggle-container" [class.active]="isActive">
+  <div class="toggle" (click)="onToggle()" [@openClose]="isActive ? 'open': 'closed' ">
+    <mat-icon *ngIf="!isActive" aria-hidden=" false" aria-label="open lock icon" fontIcon="lock"></mat-icon>
+    <mat-icon *ngIf="isActive" aria-hidden=" false" aria-label="open lock icon" fontIcon="lock_open"></mat-icon>
   </div>
 </div>

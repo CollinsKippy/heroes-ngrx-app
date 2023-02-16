@@ -27,4 +27,11 @@ export class HeroItemComponent {
     if (hero)
       this.viewDetails.emit(hero);
   }
+
+  onToggle(isActive: boolean, hero: Hero | null) {
+    if (hero) {
+      hero.isActive = isActive;
+      console.log(hero);
+    }
+  }
 }

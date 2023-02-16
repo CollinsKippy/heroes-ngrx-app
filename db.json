@@ -1,8 +1,8 @@
 {
   "heroes": [
-    { "id": 1, "name": "Moran", "powerLevel": 92 },
-    { "id": 2, "name": "Luanda", "powerLevel": 89 },
-    { "id": 3, "name": "Tai", "powerLevel": 94 },
-    { "id": 4, "name": "Miwani", "powerLevel": 77 }
+    { "id": 1, "isActive": true, "name": "Moran", "powerLevel": 92 },
+    { "id": 2, "isActive": false, "name": "Luanda", "powerLevel": 89 },
+    { "id": 3, "isActive": true, "name": "Tai", "powerLevel": 94 },
+    { "id": 4, "isActive": false, "name": "Miwani", "powerLevel": 77 }
   ]
 }

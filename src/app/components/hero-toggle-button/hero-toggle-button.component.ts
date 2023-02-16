@@ -1,5 +1,5 @@
 import { MatIconModule } from '@angular/material/icon';
-import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   trigger,
@@ -37,11 +37,14 @@ import {
   ]
 })
 export class HeroToggleButtonComponent {
-  isOpen: boolean = true;
+  @Input() isActive: boolean | undefined;
+
+  @Output() toggled = new EventEmitter<boolean>();
 
   constructor(private elementRef: ElementRef) { }
 
   onToggle() {
-    this.isOpen = !this.isOpen;
+    this.isActive = !this.isActive;
+    this.toggled.emit(this.isActive);
   }
 }
