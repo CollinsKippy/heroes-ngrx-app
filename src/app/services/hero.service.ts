@@ -18,16 +18,18 @@ export class HeroService {
     }
   }).pipe(
     tap(heroes => console.table(heroes)),
-    catchError(err => {
-      console.log({ err });
-      this.processError(err, 'Get Heroes');
-      return of(err);
-    })
+    catchError(this.processError<Hero[]>('Get Heroes', []))
   );
 
-
-  private processError(err: any, requestName: string = 'http operation'): any {
-    return (err: any): Observable<any> => {
+  /**
+   * Process the incoming error.
+   * Logging the error in a future release.
+   * @param err Error object
+   * @param requestName Name of Request
+   * @returns Error Observable
+   */
+  private processError<T>(requestName: string = 'http operation', data: T): any {
+    return (err: any): Observable<T> => {
       let snackBarRef;
       if (err instanceof HttpErrorResponse) {
         switch (err.status) {
@@ -57,7 +59,7 @@ export class HeroService {
             break;
         }
       }
-      return of(err);
+      return of(data as T);
     };
   }
 }
