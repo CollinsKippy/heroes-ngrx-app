@@ -1,10 +1,15 @@
 import { createAction, props } from '@ngrx/store';
-import { Hero } from 'src/app/entities/hero';
 
-// GET HEROES
+export const loadHeros = createAction(
+  '[Hero] Load Heros'
+);
 
-export const loadHeroes = createAction('[Dashboard Page] Load Heroes');
+export const loadHerosSuccess = createAction(
+  '[Hero] Load Heros Success',
+  props<{ data: any }>()
+);
 
-export const loadHeroesSuccess = createAction('[Dashboard API] Load Heroes Success', props<{ heroes: Hero[]; }>());
-
-export const loadHeroesFailure = createAction('[Dashboard API] Load Heroes Success', props<{ error: any; }>());
+export const loadHerosFailure = createAction(
+  '[Hero] Load Heros Failure',
+  props<{ error: any }>()
+);

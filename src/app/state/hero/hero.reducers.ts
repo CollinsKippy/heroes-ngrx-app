@@ -1,4 +1,4 @@
-import { loadHeroes, loadHeroesSuccess, loadHeroesFailure } from './hero.actions';
+// import { loadHeroes, loadHeroesSuccess, loadHeroesFailure } from './hero.actions';
 import { createReducer, on, props } from '@ngrx/store';
 import { Hero } from 'src/app/entities/hero';
 
@@ -18,11 +18,11 @@ export const initialState: HeroState = {
 
 export const heroReducer = createReducer(
   initialState,
-  on(loadHeroes, (state: HeroState) => ({ ...state, isLoading: true })),
-  on(loadHeroesSuccess, (state: HeroState, { heroes }) => ({
-    ...state, heroes: heroes, isLoading: false
-  })),
-  on(loadHeroesFailure, (state: HeroState, { error }) => ({
-    ...state, heroes: [], isLoading: false, error: error
-  })),
+  // on(loadHeroes, (state: HeroState) => ({ ...state, isLoading: true })),
+  // on(loadHeroesSuccess, (state: HeroState, { heroes }) => ({
+  //   ...state, heroes: heroes, isLoading: false
+  // })),
+  // on(loadHeroesFailure, (state: HeroState, { error }) => ({
+  //   ...state, heroes: [], isLoading: false, error: error
+  // })),
 );

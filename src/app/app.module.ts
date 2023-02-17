@@ -14,7 +14,10 @@ import { HeroListComponent } from "./components/hero-list/hero-list.component";
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { reducers, metaReducers } from './reducers';
+import { heroReducer } from './state/hero/hero.reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { HeroEffects } from './state/hero/hero.effects';
+import * as fromHero from './state/hero/hero.reducer';
 
 @NgModule({
     declarations: [
@@ -43,9 +46,10 @@ import { reducers, metaReducers } from './reducers';
 
         AppRoutingModule,
 
-        StoreModule.forRoot(reducers, { metaReducers }),
-
+        StoreModule.forRoot({ hero: heroReducer }, {}),
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+        EffectsModule.forRoot([HeroEffects]),
+        StoreModule.forFeature(fromHero.heroFeatureKey, fromHero.reducer),
     ]
 })
 export class AppModule { }
