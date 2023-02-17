@@ -7,5 +7,5 @@ import { Actions, createEffect } from '@ngrx/effects';
 export class HeroEffects {
 
 
-  constructor(private actions$: Actions) { }
+  constructor(private actions$: Actions) {}
 }

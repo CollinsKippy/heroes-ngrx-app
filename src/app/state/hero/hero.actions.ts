@@ -6,10 +6,10 @@ export const loadHeros = createAction(
 
 export const loadHerosSuccess = createAction(
   '[Hero] Load Heros Success',
-  props<{ data: any }>()
+  props<{ data: any; }>()
 );
 
 export const loadHerosFailure = createAction(
   '[Hero] Load Heros Failure',
-  props<{ error: any }>()
+  props<{ error: any; }>()
 );
