@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDividerModule } from '@angular/material/divider';
 import { HeroListComponent } from "./components/hero-list/hero-list.component";
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
     declarations: [
@@ -39,6 +40,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
         NavBarComponent,
 
         AppRoutingModule,
+
+        StoreModule.forRoot({}, {}),
     ]
 })
 export class AppModule { }
