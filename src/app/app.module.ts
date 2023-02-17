@@ -13,6 +13,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { HeroListComponent } from "./components/hero-list/hero-list.component";
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers, metaReducers } from './reducers';
 
 @NgModule({
     declarations: [
@@ -42,6 +44,10 @@ import { StoreModule } from '@ngrx/store';
         AppRoutingModule,
 
         StoreModule.forRoot({}, {}),
+
+        StoreModule.forRoot(reducers, { metaReducers }),
+
+        // StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     ]
 })
 export class AppModule { }
