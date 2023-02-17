@@ -1,6 +1,6 @@
 # HeroesNgrxApp
 
-This App Will Focus on the Basics of Angular.\
+This App Will Focus on the Basics of Angular with NgRx.\
 Key Areas: Standalone Components, Directives and NgRx.\
 App uses Json-server with db.json at the root of the application.\
 Custom toggle button with angular animations.\
